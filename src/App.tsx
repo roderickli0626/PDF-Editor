@@ -105,7 +105,7 @@ const App: React.FC<{}> = () => {
         {!isPdfLoaded && (<>
         <Row className='justify-content-center mt-lg-5'>
           <div>
-            <h3>上傳一份 Pdf！</h3>
+            <h3>Upload a copy Pdf！</h3>
             <Button onClick={handlePdfUpload}><BsFillCloudUploadFill /> Upload</Button>
           </div>
         </Row>
@@ -113,13 +113,13 @@ const App: React.FC<{}> = () => {
         <Row>
           <Col sm={3}>
             {isPdfLoaded && (<>
-              <h3>加入附件</h3>
+              <h3>Add Attachment</h3>
               <p>
-                這些圖片被儲存在 local 的 IndexedDB。
-                <Button variant="link" onClick={removeAllImages}>清空圖片</Button>
+              The images are stored locally in IndexedDB。
+                <Button variant="link" onClick={removeAllImages}>Clear Image</Button>
               </p>
               <CandidateText scale={scale} onClick={handleText}>
-                新增文字
+                Add Text
               </CandidateText>
               {allCandidates
                 .filter(attachment=>attachment.type === AttachmentTypes.IMAGE)
@@ -133,7 +133,7 @@ const App: React.FC<{}> = () => {
                 })
               }
               <CandidateText scale={scale} onClick={handleImageUpload}>
-                上傳圖片
+                Upload Image
               </CandidateText>
             </>)}
           </Col>
